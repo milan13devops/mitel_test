@@ -1,0 +1,32 @@
+yum install epel-release wget uzip vim curl -y
+    2   yum  install  java-1.8.0-openjdk-devel -y
+    3  find / -iname java
+    4  echo "export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64" >> /etc/profile
+    5  echo "export JRE_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64/jre" >> /etc/profile
+    6  source /etc/profile
+    7  env
+    8  cat /etc/profile
+    9  cd /opt/
+   10  ll
+   
+   12  wget https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.41/bin/apache-tomcat-9.0.41.tar.gz
+   13  ll
+   14  tar -xvzf apache-tomcat-9.0.41.tar.gz
+   15  ll
+   16  mv apache-tomcat-9.0.41 tomcat
+   17  ll
+   18   cd /opt/tomcat/webapps/manager/META-INF
+   19  ll
+   20  vim context.xml
+   21  cd /opt/tomcat/conf/
+   22  ll
+   23  vim tomcat-users.xml
+   24  cd ../bin/
+   25  ll
+   26  useradd  chandan
+   27  passwd chandan
+   28  chmod +x startup.sh
+   29  ./shutdown.sh
+   30  ./startup.sh
+   31  ss -ntulp
+
